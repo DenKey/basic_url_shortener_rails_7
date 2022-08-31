@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  if Rails.env.development? || Rails.env.test?
+    default_url_options :host => "localhost", port: 3000
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/:shortcode', to: 'links#show', as: :shortcode
+  get '/page/not_found', to: 'links#not_found', as: :not_found, format: 'json'
+  post '/', to: 'links#create', as: :create_link, format: 'json'
 end

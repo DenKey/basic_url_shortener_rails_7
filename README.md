@@ -1,24 +1,21 @@
-# README
+# Install
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install RVM
 
-Things you may want to cover:
+`rvm install ruby-3.1.1
+`
+`bundle install`
 
-* Ruby version
+`rake db:setup`
 
-* System dependencies
+`rake db:migrate`
 
-* Configuration
+`rails s`
 
-* Database creation
+# Run
 
-* Database initialization
+`curl localhost:3000 --data "url=http://www.google.com" -X POST`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`http://localhost:3000/3f1af7
+`
+`http://localhost:3000/page/not_found`
